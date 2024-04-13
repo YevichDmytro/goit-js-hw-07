@@ -1,4 +1,6 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -11,4 +13,387 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+  margin-left: auto;
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.tasks-list {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto 0;
+  border: 4px solid lightskyblue;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 16px;
+  max-width: fit-content;
+}
+
+.tasks-list li {
+  background-color: wheat;
+  height: 50px;
+  width: calc((100% - 5 * 16px) / 6);
+
+  &:first-child {
+    margin-left: 16px;
+  }
+
+  &:last-child {
+    margin-right: 16px;
+  }
+}
+
+.tasks-list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  padding: 0 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+
+  &:hover {
+    box-shadow: inset 0px 0px 8px 3px rgba(255, 255, 255, 1);
+  }
+}
+
+.go-back-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0 50px;
+  width: fit-content;
+  padding: 24px;
+  height: 50px;
+  background-color: wheat;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+
+  &:hover {
+    box-shadow: inset 0px 0px 8px 3px rgba(255, 255, 255, 1);
+  }
+}
+
+/* ================================ Task-1 ================================ */
+#categories {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+  padding: 24px;
+  width: 440px;
+  height: 888px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+#categories .item {
+  border-radius: 8px;
+  padding: 16px;
+  width: 392px;
+  height: auto;
+  background-color: #f6f6fe;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+#categories .item h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+#categories .item ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  width: 360px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 0 8px 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+/* ================================ Task-2 ================================ */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  margin: 100px auto 0;
+  min-width: 360px;
+  max-width: calc(1128px + 20px * 2);
+  outline: 4px solid lightskyblue;
+  padding: 20px;
+}
+
+.gallery-element {
+  min-width: 360px;
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+/* ================================ Task-3 ================================ */
+#name-input {
+  width: 360px;
+  height: 40px;
+  margin: 16px 0;
+  padding-left: 16px;
+
+  &::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+  }
+}
+
+.header-task3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.reset-btn {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  height: 40px;
+  width: 160px;
+  border-radius: 4px;
+  border: 2px solid lightgray;
+  transition: background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    background-color: lightgreen;
+  }
+}
+
+.btn-mouseDown-click {
+  border: 2px solid green;
+}
+
+/* ================================ Task-4 ================================ */
+.login-form {
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 3px solid lightskyblue;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 256px;
+}
+
+.label-email,
+.label-password {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-email,
+.input-password {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  min-width: 100%;
+  height: 40px;
+}
+
+.submit-btn {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
+
+  &:hover {
+    background-color: #6c8cff;
+  }
+}
+
+/* ================================ Task-5 ================================ */
+.widget {
+  border: 2px dashed rgb(0, 0, 0);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 345px;
+  height: 280px;
+  margin: 100px auto 0;
+  background-color: #fff;
+}
+
+.widget p + span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.change-color,
+.copy-btn {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background-color: #4e75ff;
+  border: none;
+  margin-top: 16px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  &:hover {
+    background-color: #6c8cff;
+  }
+}
+
+.pressed-btn {
+  border: 2px dashed black;
+}
+
+/* ================================ Task-6 ================================ */
+#controls {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  background-color: #f6f6fe;
+  display: flex;
+  gap: 16px;
+  margin: 0 auto 16px;
+  outline: 2px solid rgba(135, 206, 250, 0.25);
+}
+
+#controls input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 4px;
+  width: 150px;
+  height: 40px;
+}
+
+[data-create],
+[data-destroy] {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  border: none;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  &:hover {
+    outline: 2px solid rgb(135, 206, 250);
+  }
+}
+
+[data-create] {
+  background-color: #4e75ff;
+}
+
+[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+#boxes {
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 486px;
+  min-height: 160px;
+  max-height: 600px;
+  background-color: #f6f6fe;
+  outline: 2px solid rgba(135, 206, 250, 0.25);
+  margin: 0 auto;
+  overflow-y: auto;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
