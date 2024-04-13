@@ -20,7 +20,7 @@ const colorHandler = event => {
 
 changeColorBtn.addEventListener('click', colorHandler);
 
-// Додавання(і видалення) класу pressed-btn до списку класів кнопки button.change-color
+// Додавання(і видалення) класу pressed-btn до(від) списку класів кнопки button.change-color
 changeColorBtn.addEventListener('mousedown', event => {
   changeColorBtn.classList.add('pressed-btn');
 });

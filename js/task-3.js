@@ -1,7 +1,7 @@
 const inputText = document.querySelector('#name-input');
 const outputText = document.querySelector('#name-output');
 
-const handler = event => {
+const inputHandler = event => {
   const inputTextValue = event.currentTarget.value.trim();
   outputText.textContent = inputTextValue;
 
@@ -10,8 +10,8 @@ const handler = event => {
   }
 };
 
-inputText.addEventListener('input', handler);
-inputText.addEventListener('blur', handler);
+inputText.addEventListener('input', inputHandler);
+inputText.addEventListener('blur', inputHandler);
 
 //Вирішив додати кнопку для очищення тексту в input
 const header = document.querySelector('.title');

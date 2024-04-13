@@ -25,12 +25,12 @@ const images = [
   },
 ];
 
-const markup = images
+const markupListElements = images
   .map(image => `<li><img src=${image.url} alt="${image.alt}"></li>`)
   .join('');
 
 const gallery = document.querySelector('.gallery');
-gallery.insertAdjacentHTML('afterbegin', markup);
+gallery.insertAdjacentHTML('afterbegin', markupListElements);
 
 const liTags = document.querySelectorAll('.gallery li');
 liTags.forEach(liTag => liTag.setAttribute('class', 'gallery-element'));
