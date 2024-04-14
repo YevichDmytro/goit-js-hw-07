@@ -8,10 +8,11 @@ const inputNum = document.querySelector('#controls input');
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const parentDivElem = document.querySelector('#boxes');
+const copyInputValue = inputNum.value.slice();
 
 function createBoxes(amount) {
   if (amount < 1 || amount > 100) {
-    return alert('Число має бути в межах від 1 до 100');
+    // return alert('Число має бути в межах від 1 до 100');
   }
 
   for (let i = 0; i < amount; i++) {
