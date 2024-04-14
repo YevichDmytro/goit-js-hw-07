@@ -8,7 +8,6 @@ const inputNum = document.querySelector('#controls input');
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const parentDivElem = document.querySelector('#boxes');
-const copyInputValue = inputNum.value.slice();
 
 function createBoxes(amount) {
 
