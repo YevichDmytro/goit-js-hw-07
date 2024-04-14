@@ -11,8 +11,10 @@ const parentDivElem = document.querySelector('#boxes');
 const copyInputValue = inputNum.value.slice();
 
 function createBoxes(amount) {
+  childDivElement.style.backgroundColor = getRandomHexColor();
+  
   if (amount < 1 || amount > 100) {
-    // return alert('Число має бути в межах від 1 до 100');
+    return alert('Число має бути в межах від 1 до 100');
   }
 
   for (let i = 0; i < amount; i++) {
