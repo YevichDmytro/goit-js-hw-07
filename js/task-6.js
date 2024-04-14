@@ -22,6 +22,8 @@ function createBoxes(amount) {
     return;
   }
 
+  parentDivElem.innerHTML = '';
+
   for (let i = 0; i < amount; i++) {
     const newDivElem = document.createElement('div');
     parentDivElem.append(newDivElem);
